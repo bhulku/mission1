@@ -28,6 +28,7 @@ gem 'bootstrap-sass', '~> 2.1.0.0'
 gem "rolify"
 gem 'kaminari'
 gem 'unicorn'
+gem 'client_side_validations'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

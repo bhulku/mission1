@@ -33,6 +33,7 @@ GEM
     bootstrap-sass (2.1.0.0)
     builder (3.0.3)
     cancan (1.6.8)
+    client_side_validations (3.1.4)
     coderay (1.0.7)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
@@ -126,6 +127,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 2.1.0.0)
   cancan
+  client_side_validations
   devise
   jquery-rails
   kaminari
