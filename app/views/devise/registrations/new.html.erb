@@ -1,0 +1,39 @@
+
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name),:class=>"form-horizontal") do |f| %>
+    <fieldset>
+
+      <legend>Registration</legend>
+
+      <%= devise_error_messages! %>
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">Email</label>
+        <div class="controls">
+           <%= f.email_field :email,:placeHolder=>"Email" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">Password</label>
+        <div class="controls">
+          <%= f.password_field :password %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">Password Confirmation</label>
+        <div class="controls">
+          <%= f.password_field :password_confirmation %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">Secret Token</label>
+        <div class="controls">
+          <%= f.password_field :token %>
+        </div>
+      </div>
+      <div><%= f.submit "Sign up" ,:class=>"btn"%></div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+</fieldset>

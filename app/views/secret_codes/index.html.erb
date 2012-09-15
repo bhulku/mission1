@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h3>Secret Token</h3>
+  <div class="span8" > </div>
+  </div>
+</div>  
+<div style="float:right"> 
+  <%= form_tag(generate_token_path,:class=>"form-inline") do %>
+    <!-- <label class="control-label" for="inputEmail">No Of Token </label> -->
+    <%= select_tag :no_of_token,options_for_select(number_of_token_options) %>
+    <%= submit_tag "Generate Token",:class=>"btn" %>
+  <% end %>
+</div>
+<table class="table table-bordered table-hover table-condensed">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Token</th>
+    </tr>
+  </thead>  
+  <tbody>
+    <% @secret_codes.each do |secret_code| %>
+      <tr>
+        <td><%= secret_code.user.email if secret_code.user%></td>
+        <td><%= secret_code.token %></td>
+      </tr>
+    <% end %>
+  </tbody>  
+</table>
+<%= paginate @secret_codes %>
+<%#= link_to 'New Secret code', new_secret_code_path %>
