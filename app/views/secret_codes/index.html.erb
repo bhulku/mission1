@@ -6,7 +6,7 @@
 <div style="float:right"> 
   <%= form_tag(generate_token_path,:class=>"form-inline") do %>
     <!-- <label class="control-label" for="inputEmail">No Of Token </label> -->
-    <%= select_tag :no_of_token,options_for_select(number_of_token_options) %>
+    <%= select_tag :no_of_token,options_for_select(number_of_token_options,10) %>
     <%= submit_tag "Generate Token",:class=>"btn" %>
   <% end %>
 </div>
