@@ -3,12 +3,19 @@
   <div class="span8" > </div>
   </div>
 </div>  
-<div style="float:right"> 
-  <%= form_tag(generate_token_path,:class=>"form-inline") do %>
+<div class="row"> 
+  
+  <div class="span8">
+    <%= paginate @secret_codes %>
+  </div>
+  <div class="span4" style="margin-top:20px">
+    <%= form_tag(generate_token_path,:class=>"form-inline") do %>
     <!-- <label class="control-label" for="inputEmail">No Of Token </label> -->
-    <%= select_tag :no_of_token,options_for_select(number_of_token_options,10) %>
-    <%= submit_tag "Generate Token",:class=>"btn" %>
-  <% end %>
+      <%= select_tag :no_of_token,options_for_select(number_of_token_options,10) %>
+      <%= submit_tag "Generate Token",:class=>"btn" %>
+    <% end %>
+  </div>
+  
 </div>
 <table class="table table-bordered table-hover table-condensed">
   <thead>
@@ -26,5 +33,7 @@
     <% end %>
   </tbody>  
 </table>
+<div style="float:right;margin:0">
 <%= paginate @secret_codes %>
+</div>
 <%#= link_to 'New Secret code', new_secret_code_path %>
